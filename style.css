@@ -1,0 +1,117 @@
+.flex_container {
+    display: flex;
+}
+article {
+    flex: 3;
+}
+aside {
+    flex: 1;
+}
+article, aside {
+    margin-bottom: 500px;
+}
+header {
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0,0,0,0.9);
+}
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(230, 230, 15);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+nav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+nav ul {
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    padding-top: 5px;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 15px;
+}
+#mp4 {
+    margin-top: 5px;
+}
+#rank {
+    margin-top: 30px;
+}
+#brandRank {
+    margin-top: 50px;
+}
+article img:hover {
+    opacity: 0.5;
+}
+#신발_1:hover {
+    content: url(./image/1_반스_올드스쿨-블랙2.jpg);
+}
+#신발_2:hover {
+    content: url(./image/2_컨버스_척\ 70\ 클래식-블랙2.jpg);
+}
+#신발_3:hover {
+    content: url(./image/3_컨버스_척\ 70\ 클래식\ 블랙2.jpg);
+}
+#신발_4:hover {
+    content: url(./image/4_아디다스_BW\ 독일군\ 스니커즈-화이트2.jpg);
+}
+#new {
+    margin-top: 50px;
+}
+#my {
+    margin-top: 50px;
+    margin-right: 70px;
+    margin-left: auto;
+    padding: 0px 10px 10px 0;
+    height: 165px;
+    width: 150px;
+    position: sticky;
+    top: 50px;
+    background-color: rgba(230, 230, 15,0.8);
+    border: solid 2px;
+    border-radius: 10px;
+}
+aside li {
+    list-style: none;
+    text-align: right;
+}
+aside li a {
+    text-decoration: none;
+    font-weight: 500;
+}
+footer {
+    background-color: rgba(0,0,0,0.7);
+    height: 260px;
+}
+footer {
+    color: white;
+}
+footer ul {
+    margin-left: 10px;
+    margin-top: 25px;
+}
+footer li {
+    list-style-type: none;
+}
+#sns {
+    display: inline-block;
+    margin-top: 25px;
+}
+#sns i {
+    margin-right: 10px;
+}
+footer ul a {
+    text-decoration: none;
+}
+#address {
+    font-size: 12px;
+}
