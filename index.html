@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {width: 980px; margin: 0px auto;}
+        *{font-family: "맑은 고딕", Arial, Helvetica, sans-serif; line-height: 150%;}
+    </style>
+    <script>
+        function w3_open(){
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close(){
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        let data = [["./image/N1.jpg","스웨이드 마유 - 그린:화이트:검",109000],
+                 ["./image/N2.jpg","스코노_그런지 캔버스 스니커즈-퍼플",79000],
+                 ["./image/N3.jpg","포럼 84 로우 - 화이트:퍼플:오렌지 / GX9049",129000],
+                 ["./image/N4.jpg","올드스쿨 36 DX - (애너하임 팩토리) 프리스타일:스팩트라 옐로우 / VN0A54F397A1", 105000]]
+        function tablePrint() {
+            let text = '';
+            text = `<table class="w3-table-all w3-hoverable"><tr><th class="w3-center w3-yellow">상품사진</th><th class="w3-center w3-yellow" style="width:350px">이름</th><th class="w3-center w3-yellow" style="width:150px">가격</th></tr>`;
+            for (let i = 0; i < data.length; i++) {
+                text += `<tr><td class="w3-center"><img src=${data[i][0]} style="width:150px; height:auto;"></td><td class="w3-center" style="vertical-align:middle">${data[i][1]}</td><td class="w3-center" style="vertical-align:middle">${data[i][2]}</td></tr>`;
+            }
+            text += `</table>`;
+                document.getElementById("productList").innerHTML=text;
+        }
+        function fileUpload() {
+            let a = new Array();
+            let file = "./image/" + document.getElementById("file").files[0].name;
+            let name = document.getElementById("name").value;
+            let price = parseInt(document.getElementById("price").value);
+            a[0] = file;
+            a[1] = name;
+            a[2] = price;
+            data.push(a);
+            console.log(data);
+        }
+        function login() {
+            let id = document.getElementById("id").value;
+            let pw = document.getElementById("pw").value;
+            if(id==="admin") {
+                if(pw=="1234") {
+                    alert("로그인이 되었습니다.");
+                    document.getElementById("login").innerHTML="<h5>" + id + " 로그인 </h5>";
+                } else {
+                    alert("비밀번호를 틀렸습니다");
+                }
+            } else if(id===""){
+                alert("아이디를 입력하세요");
+            } else {
+                alert("아이디를 확인하세요");
+            }
+        }
+        function inputReset(id) {
+            var input = document.getElementById(id);
+            input.value = "";
+        }
+
+    </script>
+</head>
+<body onload="tablePrint()">
+    <header>
+        <h1><i class="fa fa-quote-left"></i> shoes brand <i class="fa fa-quote-right"></i></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#rank">TOP</a></li>
+            <li><a href="#new">NEW</a></li>
+            <li><a href="">MEN</a></li>
+            <li><a href="">WOMEN</a></li>
+            <li><a href="">KIDS</a></li>
+            <li><div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+                <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+                <a href="#" class="w3-bar-item w3-button">운동화</a>
+                <a href="#" class="w3-bar-item w3-button">스포츠</a>
+                <a href="#" class="w3-bar-item w3-button">구두</a>
+                <a href="#" class="w3-bar-item w3-button">샌들</a>
+                <a href="#" class="w3-bar-item w3-button">캐주얼</a>
+                <a href="#" class="w3-bar-item w3-button">부츠</a>
+                </div>
+                <div>
+                    <button class="w3-button w3-large w3-yellow w3-border" onclick="w3_open()">☰</button>
+                </div></li>
+        </ul>
+    </nav>
+    <section class="flex_container">
+        <article>
+            <iframe id="mp4" width="672" height="378" src="https://www.youtube.com/embed/StDrAyH7RNA?autoplay=1&amp;mute=1&amp;playlist=StDrAyH7RNA&amp;loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="rank">
+                <h3>상품 랭킹</h3>
+                <div class="w3-row" style="margin-bottom: 10px;">
+                    <div class="w3-col s3 w3-container">1위</div>
+                    <div class="w3-col s3 w3-container">2위</div>
+                    <div class="w3-col s3 w3-container">3위</div>
+                    <div class="w3-col s3 w3-container">4위</div>
+                </div>
+                <div class="w3-row">
+                    <img class="w3-col s3 w3-container" src="./image/1_반스_올드스쿨-블랙.jpg" id="신발_1" alt="Vans">
+                    <img class="w3-col s3 w3-container" src="./image/2_컨버스_척 70 클래식-블랙.jpg" id="신발_2" alt="CONVERSE">
+                    <img class="w3-col s3 w3-container" src="./image/3_컨버스_척 70 클래식 블랙.jpg" id="신발_3" alt="CONVERSE">
+                    <img class="w3-col s3 w3-container" src="./image/4_아디다스_BW 독일군 스니커즈-화이트.jpg" id="신발_4" alt="adidas">
+                </div>
+                <div class="w3-row" style="font-size: 12px; text-align: center;">
+                    <div class="w3-col s3 w3-container">Vans 올드스쿨 - 블랙 / VN000D3HY281</div>
+                    <div class="w3-col s3 w3-container">CONVERSE 척 70 클래식 블랙 162058C</div>
+                    <div class="w3-col s3 w3-container">CONVERSE 척 70 클래식 블랙 162050C</div>
+                    <div class="w3-col s3 w3-container">adidas BW 독일군 스니커즈 - 화이트 / BZ0579</div>
+                </div>
+            </div>
+            <div id="brandRank">
+                <h3>브랜드 랭킹</h3>
+                <div class="w3-row" style="margin-bottom: 10px">
+                    <div class="w3-col s4 w3-container" style="font-size: 20px;">1위</div>
+                    <div class="w3-col s4 w3-container" style="font-size: 20px;">2위</div>
+                    <div class="w3-col s4 w3-container" style="font-size: 20px;">3위</div>
+                </div>
+                <div class="w3-row" style="position:relative">
+                    <img class="w3-col s4 w3-container" style="height: 93.58px; width: auto;" src="./image/CONVERSE.png" alt="CONVERSE">
+                    <img class="w3-col s4 w3-container" style="position: absolute; left: 27%;" src="./image/Vans.png" alt="Vans">
+                    <img class="w3-col s4 w3-container" style="height: 93.58px; width: auto; position: absolute; left: 65%;" src="./image/adidas.png" alt="adidas">
+                </div>
+            </div>
+            <div id="new" class="w3-container">
+                <h3>NEW</h3>
+                <div id="productList">
+
+                </div>
+                </table>
+            </div>
+            <hr>
+            <div>
+                <h3>상품 등록</h3>
+                사진 : <input class="w3-input" type="file" name="" id="file"> <br>
+                이름 : <input class="w3-input" type="text" name="" id="name"> <br>
+                가격 : <input class="w3-input" type="text" name="" id="price"> <br>
+                <button class= "w3-button w3-yellow" onclick="fileUpload();"> 상품등록</button>
+                <button class= "w3-button w3-yellow" onclick="tablePrint();"> 상품리스트</button>
+            </div>
+        </article>
+        <aside class="right">
+            <div id="login">
+                <h3>로그인</h3>
+                아이디 : <br>
+                <input type="text" name="" id="id"><br>
+                비밀번호 : <br>
+                <input type="password" name="" id="pw"><br><br>
+                <button onclick="login(); inputReset('id'); inputReset('pw');" style="padding: 5px 62.5px 5px 62.5px; background-color: rgb(230, 230, 15);">로그인</button>
+            </div>
+            <div id="my">
+                <ul>
+                    <li><a href="http://">마이페이지</a></li>
+                    <li><a href="http://">장바구니</a></li>
+                    <li><a href="" target="_blank">회원가입</a></li>
+                    <li><a href="" id="forgot">비밀번호 찾기</a></li>
+                    <li><a href="http://">고객센터</a></li>
+                    <li><a href="http://"><i class="fa fa-commenting-o"></i> 1:1 문의</a></li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+    <footer>
+        <div class="w3-row">
+            <div class="w3-col s3">
+                <ul>
+                    <li>IMFORMATION</li>
+                    <br>
+                    <a href=""><li>공지사항</li></a>
+                    <a href=""><li>매장찾기</li></a>
+                </ul>
+            </div>
+            <div class="w3-col s3">
+                <ul>
+                    <li>HELP</li>
+                    <br>
+                    <a href=""><li>고객센터</li></a>
+                    <a href=""><li>FAQs</li></a>
+                    <a href=""><li>1:1 문의</li></a>
+                </ul>
+            </div>
+            <div class="w3-col s6">
+                <ul id="sns">
+                    <a href=""><i class="fa fa-youtube" style="font-size: 25px; color: white;"></i></a>
+                    <a href=""><i class="fa fa-instagram" style="font-size: 25px; color: white;"></i></a>
+                    <a href=""><i class="fa fa-facebook" style="font-size: 25px; color: white;"></i></a>
+                    <a href=""><i class="fa fa-twitter" style="font-size: 25px; color: white;"></i></a>
+                </ul>
+                <ul id=address>
+                <li>개인정보 처리방침/이용약관/경기 성남시 분당구 판교역로</li>
+                <li>고객상담실(AS/오프라인) 000-000-0000</li>
+                <li>대표 이메일: <a href="mailto:dlawn0828@naver.com" title="send an email">dlawn0828@naver.com</a></a></li>
+                <li>대표이사: 임은주 사업자등록번호: 000-00-00000</li>
+                <br>
+                <li>Copyright 2021. shoes brand</li>
+                <br>
+                <br>
+                <li style="font-size: 10px;">이 사이트는 과제를 위한 제출물로 무신사 홈페이지를 참고했습니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
