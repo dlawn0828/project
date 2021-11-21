@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            background-color: black;
+            font-size: large;
+            border-radius: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+        button {
+            text-align: center;
+            padding: 10px 177px;
+            background-color: gray;
+            border: 1px;
+            margin-top: 0px;
+        }
+    </style>
+    <script>
+        function mover(e) {
+            e.style.backgroundColor = "white";
+        }
+        function mout(e) {
+            e.style.backgroundColor = "gray";
+        }
+    </script>
+</head>
+<body>
+    <img src="./image/런칭.jpg" alt="" srcset="">
+    <h2>11.25(목) pm1:30</h2>
+    <div><a href="http://">런칭이벤트 바로가기</a></div>
+    <button onclick="window.close();" onmouseover="mover(this)" onmouseout="mout(this)">닫기</button>
+</body>
+</html>

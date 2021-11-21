@@ -63,10 +63,13 @@
             var input = document.getElementById(id);
             input.value = "";
         }
+        function popup() {
+            window.open("event.html","event","width=400 , height= 520, scrollbars=no, resizable=no, toolbars=no, menubar=no");
+        }
 
     </script>
 </head>
-<body onload="tablePrint()">
+<body onload="tablePrint(); popup();">
     <header>
         <h1><i class="fa fa-quote-left"></i> shoes brand <i class="fa fa-quote-right"></i></h1>
     </header>
@@ -77,6 +80,7 @@
             <li><a href="">MEN</a></li>
             <li><a href="">WOMEN</a></li>
             <li><a href="">KIDS</a></li>
+            <li id="event"><a href="http://">런칭이벤트</a></li>
             <li><div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
                 <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
                 <a href="#" class="w3-bar-item w3-button">운동화</a>
